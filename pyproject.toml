@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "project#1_ivanov_123"
+version = "0.1.0"
+description = "Текстовая adventure игра 'Лабиринт сокровищ'"
+authors = ["Ваше Имя <ваш.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+project = "labyrinth_game.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+packages = [
+    { include = "labyrinth_game" },
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = ["venv", ".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
